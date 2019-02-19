@@ -63,6 +63,14 @@ services:
     - "8444:8444"
     networks:
     - custom_network
+    volumes:
+        - ./src/usr/local/openresty:/usr/local/openresty
+        - ./src/usr/local/bin:/usr/local/bin
+        - ./src/usr/local/etc:/usr/local/etc
+        - ./src/usr/local/kong:/usr/local/kong
+        - ./src/usr/local/lib:/usr/local/lib
+        - ./src/usr/local/share:/usr/local/share
+        - ./src/etc/kong:/etc/kong
 
   #######################################
   # Konga: Kong GUI
